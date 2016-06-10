@@ -15,6 +15,8 @@
 		A5F732621D0B2659007BCBA0 /* FizzBuzzSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F732611D0B2659007BCBA0 /* FizzBuzzSwiftUITests.swift */; };
 		A5F732701D0B2A5D007BCBA0 /* BrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F7326F1D0B2A5D007BCBA0 /* BrainTests.swift */; };
 		A5F732721D0B32B6007BCBA0 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F732711D0B32B6007BCBA0 /* Brain.swift */; };
+		A5F732781D0B5B99007BCBA0 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F732771D0B5B99007BCBA0 /* GameTests.swift */; };
+		A5F7327A1D0B5BC3007BCBA0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F732791D0B5BC3007BCBA0 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A5F732631D0B2659007BCBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F7326F1D0B2A5D007BCBA0 /* BrainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainTests.swift; sourceTree = "<group>"; };
 		A5F732711D0B32B6007BCBA0 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
+		A5F732771D0B5B99007BCBA0 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTests.swift; path = ../FizzBuzzSwift/GameTests.swift; sourceTree = "<group>"; };
+		A5F732791D0B5BC3007BCBA0 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				A5F7324A1D0B2659007BCBA0 /* LaunchScreen.storyboard */,
 				A5F7324D1D0B2659007BCBA0 /* Info.plist */,
 				A5F732711D0B32B6007BCBA0 /* Brain.swift */,
+				A5F732791D0B5BC3007BCBA0 /* Game.swift */,
 			);
 			path = FizzBuzzSwift;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F732581D0B2659007BCBA0 /* Info.plist */,
+				A5F732771D0B5B99007BCBA0 /* GameTests.swift */,
 				A5F7326F1D0B2A5D007BCBA0 /* BrainTests.swift */,
 			);
 			path = FizzBuzzSwiftTests;
@@ -262,6 +268,7 @@
 				A5F732441D0B2659007BCBA0 /* ViewController.swift in Sources */,
 				A5F732721D0B32B6007BCBA0 /* Brain.swift in Sources */,
 				A5F732421D0B2659007BCBA0 /* AppDelegate.swift in Sources */,
+				A5F7327A1D0B5BC3007BCBA0 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F732701D0B2A5D007BCBA0 /* BrainTests.swift in Sources */,
+				A5F732781D0B5B99007BCBA0 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
