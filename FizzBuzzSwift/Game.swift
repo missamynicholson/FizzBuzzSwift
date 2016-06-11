@@ -11,15 +11,22 @@ import Foundation
 class Game: NSObject {
     
     var score: Int
+    let brain: Brain
     
     override init() {
         score = 0
+        brain = Brain()
         super.init()
     }
     
     func play(move: String) -> Bool {
-        score += 1
-        return true
+        let result = brain.sayWordForNumber(score + 1)
+        if result == move {
+            score += 1
+            return true
+        } else {
+            return false
+        }
     }
     
 }
