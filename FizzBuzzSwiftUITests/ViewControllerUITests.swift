@@ -49,11 +49,71 @@ class ViewControllerUITests: XCTestCase {
         
     }
     
+    func testTapFizzButtonIncrementsScore() {
+        let app = XCUIApplication()
+        let fizzButton = app.buttons["fizzButton"]
+        let numberButton = app.buttons["numberButton"]
+        wait(1.0)
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "3")
+    }
+    
+    func testTapBuzzButtonIncrementsScore() {
+        let app = XCUIApplication()
+        let fizzButton = app.buttons["fizzButton"]
+        let numberButton = app.buttons["numberButton"]
+        let buzzButton = app.buttons["buzzButton"]
+        wait(1.0)
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "5")
+    }
+    
+    func testFizzBuzzButtonIncrementsScore() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzBuzzButton = app.buttons["fizzBuzzButton"]
+        wait(1.0)
+        playTo14()
+        fizzBuzzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "15")
+    }
+    
     
     
     private func wait(seconds: NSTimeInterval) {
         let dateAfterWait = NSDate(timeIntervalSinceNow: seconds)
         NSRunLoop.mainRunLoop().runUntilDate(dateAfterWait)
+    }
+    
+    private func playTo14() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        let buzzButton = app.buttons["buzzButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        buzzButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
     }
 
     
