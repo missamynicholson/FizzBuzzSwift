@@ -19,13 +19,13 @@ class Game: NSObject {
         super.init()
     }
     
-    func play(move: String) -> Bool {
+    func play(move: String) -> (right: Bool, score: Int) {
         let result = brain.sayWordForNumber(score + 1)
         if result == move {
             score += 1
-            return true
+            return (true, score)
         } else {
-            return false
+            return (false, score)
         }
     }
     
