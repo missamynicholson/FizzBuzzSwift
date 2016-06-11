@@ -26,15 +26,15 @@ class Brain: NSObject {
        return isDivisibleBy(15, num: num)
     }
     
-    func sayWordForNumber(num: Int) -> String {
+    func sayWordForNumber(num: Int) -> Move {
         if isDivisibleByFifteen(num) {
-            return "FizzBuzz"
+            return Move.FizzBuzz
         } else if isDivisibleByFive(num) {
-            return "Buzz"
+            return Move.Buzz
         } else if isDivisibleByThree(num) {
-            return "Fizz"
+            return Move.Fizz
         } else {
-            return String(num)
+            return Move.Number
         }
     }
     

@@ -55,22 +55,22 @@ class BrainTests: XCTestCase {
     
     func testCanSayFizz() {
         let result = brain.sayWordForNumber(3)
-        XCTAssertEqual(result, "Fizz")
+        XCTAssertEqual(result, Move.Fizz)
     }
     
     func testCanSayBuzz() {
         let result = brain.sayWordForNumber(5)
-        XCTAssertEqual(result, "Buzz")
+        XCTAssertEqual(result, Move.Buzz)
     }
     
     func testCanSayFizzBuzz() {
         let result = brain.sayWordForNumber(15)
-        XCTAssertEqual(result, "FizzBuzz")
+        XCTAssertEqual(result, Move.FizzBuzz)
     }
     
     func testCanSayNumber() {
         let result = brain.sayWordForNumber(13)
-        XCTAssertEqual(result, "13")
+        XCTAssertEqual(result, Move.Number)
     }
     
 }
