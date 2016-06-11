@@ -87,6 +87,16 @@ class ViewControllerUITests: XCTestCase {
         XCTAssertEqual(newScore, "15")
     }
     
+    func testScoreResetOnButtonPress() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let resetButton = app.buttons["resetButton"]
+        wait(1.0)
+        resetButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "0")
+    }
+    
     
     
     private func wait(seconds: NSTimeInterval) {

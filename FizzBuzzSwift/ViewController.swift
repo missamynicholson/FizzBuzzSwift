@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buzzButton: UIButton!
     
+    @IBOutlet weak var resetButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         game = Game()
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
         }
         gameScore = checkedGame.score
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,19 +54,30 @@ class ViewController: UIViewController {
         let response = unwrappedGame.play(move)
         gameScore = response.score
     }
-
+    
     @IBAction func buttonTapped(sender: UIButton) {
-        if sender == fizzButton {
+        switch sender {
+        case fizzButton:
             play(Move.Fizz)
-        } else if sender == buzzButton {
+        case buzzButton:
             play(Move.Buzz)
-        } else if sender == fizzBuzzButton {
+        case fizzBuzzButton:
             play(Move.FizzBuzz)
-        } else {
+        case numberButton:
             play(Move.Number)
+        default:
+            print ("Invalid selection")
         }
     }
-
+    
+    @IBAction func reset(sender: UIButton) {
+        guard let unwrappedGame = game else {
+            print("Game is nil")
+            return
+        }
+        let result = unwrappedGame.reset()
+        gameScore = result
+    }
     
 }
 

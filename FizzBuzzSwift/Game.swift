@@ -29,4 +29,9 @@ class Game: NSObject {
         }
     }
     
+    func reset() -> Int {
+        score = 0
+        return score
+    }
+    
 }
