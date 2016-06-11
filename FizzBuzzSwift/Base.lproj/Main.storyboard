@@ -32,10 +32,14 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul5-ea-XhI">
                                         <rect key="frame" x="0.0" y="0.0" width="231" height="231"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="numberButton"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
                                         <state key="normal" title="0" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUi-4U-VH9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBj-f4-v27">
                                         <rect key="frame" x="250" y="0.0" width="231" height="231"/>
@@ -87,6 +91,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cqr-G5-har" secondAttribute="bottom" constant="38" id="vvW-RG-Yqe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberButton" destination="ul5-ea-XhI" id="Omo-Ux-ygN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
